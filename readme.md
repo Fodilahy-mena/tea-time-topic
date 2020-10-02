@@ -68,3 +68,8 @@ Here's a list of details that I'll check, for grading your project. Use it to gu
 Fork this repo and clone your fork. You have until 16h30 to complete the project. Stop coding a bit earlier to take some time documenting your project in the readme.
 
 Good luck team 🔥💪 and happy coding 👍
+
+### Report 
+
+- I fetched the data from api url and save it in the localStorage
+- I displayed the data on two different lists, according to the discussedOn.

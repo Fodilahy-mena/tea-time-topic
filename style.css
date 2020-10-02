@@ -1,0 +1,167 @@
+body {
+    margin-block-start: 4rem;
+    margin-block-end: 4rem;
+    margin-inline-end: 8rem;
+    margin-inline-start: 8rem;
+    background: #E5E5E5;
+}
+h2 {
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+margin: 0;
+color: #00473E;
+
+}
+fieldset {
+    justify-content: space-between;
+	padding: 2rem;
+	border: 2px solid whitesmoke;
+	background-color: white;
+	border-radius: 5px;
+	transition: all 0.2s;
+}
+.input {
+    padding: 8px;
+    font-size: 16px;
+    width: 550px;
+    border: 0;
+    color: gray;
+    background: #F2F7F5;
+    border-radius: 5px;
+    
+}
+.submit {
+    background: #FAAE2C;
+    width: 84px;
+    position: relative;
+    top: -3px;
+    left: 29px;
+}
+
+body > nav {
+    margin-block-start: 4rem;
+}
+.new_topic_list li, .past_topic_list li {
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    background: #FFFFFE;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #00473E;
+
+}
+.new_topic_list li:nth-of-type(1), .past_topic_list li:nth-of-type(1) {
+    margin-block-start: 0;
+}
+
+.archive, .delete {
+    float: right;
+}
+.title {
+    clear: both;
+}
+.votes {
+    display: flex;
+    justify-content: center;
+}
+.votes div {
+    margin: 16px;
+}
+.downvotes, .upvotes {
+    border-radius: 50%;
+    background: coral;
+}
+
+/* 
+const handleClick = e => {
+        if (e.target.closest('button.archive')) {
+            const button = e.target.closest('button.archive');
+            const id = button.dataset.id;
+            updateTopic(Number(id));
+        }
+    }
+
+    const updateTopic = idFromArchiveBtn => {
+        const topic = topics.find(topic => topic.id === idFromArchiveBtn);
+        topic.discussedOn = Date.now();
+        body.dispatchEvent(new CustomEvent('pleaseUpdateTheTopicList'));
+    };
+
+    body.addEventListener('click', handleClick);
+*/
+
+/* 
+
+  const newhHtml = topics.map(topic => {
+        if(topic.discussedOn == '') {
+            console.log("Discusse",`${topic.discussedOn} is not discussed`);
+        
+        return `
+            <li class="list-group-item">
+                <button class="btn archive" data-id="${topic.id}">
+                🧺
+                </button>
+                <p class="title">${topic.title}</p>
+                <div class="votes">
+                    <div>
+                        <button type="button" class="btn upvotes">
+                        👍
+                        </button>
+                        <span>${topic.upvotes}<span>
+                    </div>
+                    <div>
+                        <button type="button" class="btn downvotes">
+                        👎
+                        </button>
+                        <span>${topic.downvotes}<span>
+                    </div>
+                </div>
+            </li>
+        `;
+        }  
+    }).join('');
+
+    nexTtopicList.innerHTML = newhHtml; 
+
+    const updateTopic = idFromArchiveBtn => {
+        
+        // const topic = topics.find(topic => topic.id === idFromArchiveBtn.id);
+        const topic = topics.find(topic => topic.id === idFromArchiveBtn);
+        console.log("found topic",topic);
+        topic.discussedOn = Date.now();
+        nexTtopicList.dispatchEvent(new CustomEvent('pleaseUpdateTheTopicList'));
+    };
+
+    nexTtopicList.addEventListener('click', handleClick);
+    // inner html of past topics if there is something on topic.discussedOn
+    const pasthHtml = topics.map(topic => {
+        if(topic.discussedOn !== '') {
+            console.log(`${topic.discussedOn} is discussed`);
+            return `
+            <li class="list-group-item">
+                <button class="btn delete">
+                ❌
+                </button>
+                <p class="title">${topic.title}</p>
+                <div class="votes">
+                    <div>
+                        <span>${topic.discussedOn}<span>
+                    </div>
+                </div>
+            </li>
+        `; 
+        }  
+    }).join('');
+
+    pastTopicList.innerHTML = pasthHtml;
+*/
